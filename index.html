@@ -1,0 +1,311 @@
+<html>
+    <html lang="pt-br">
+    <head>
+        <title>INTEGRADE CADASTRO</title>
+		<meta charset="UTF-8">
+        <link rel="icon" href="IMG/int.ico">
+        <link rel="stylesheet" type="text/css" href="CSS/estilo.css" media="screen">
+        <link rel="stylesheet" type="text/css" href="CSS/mob.css" media="screen and (max-width: 800px)">
+        <script type="text/javascript" src="JS/jquery.js"></script>
+    </head>
+    <body>
+        <br><br>
+        <img id="logo" src="IMG/formintegrade.png">
+        <div id="tudao">
+
+            <form action="insert.php" enctype="multipart/form-data" method="POST" data-container-upload="formulario" ajax="true">
+
+                <fieldset >
+
+                    <p class="titulos">Formulário de Cadastro de Itens</p>
+                    <br>
+                    <fieldset class="grupo">
+                        <div class="campo">
+                        </div>
+                </fieldset>
+
+                <fieldset class="sec">
+
+                    <p class="titulos">Código da Empresa</p>
+                    <br>
+                    <fieldset class="grupo">
+                        <div class="campo">
+                            <label for="CDEMPGRP"></label>
+                            <input type="text" id="CDEMPGRP" name="CDEMPGRP" style="width: 8em" value="">
+                        </div>
+                </fieldset>
+
+                <fieldset class="sec">
+                    <p class="titulos">Classificação</p>
+                    <br>
+                    <fieldset class="grupo">
+                            <p class="classtit">Filial</p>
+                        <div class="campo">
+                            <label for="CDFILIAL"></label>
+                            <input type="text" id="CDFILIAL" name="CDFILIAL" style="width: 8em" value="" placeholder="Cod Filial">
+                        </div>
+                        <div class="campo">
+                            <label for="DSFILIAL"></label>
+                            <input type="text" id="DSFILIAL" name="DSFILIAL" style="width: 14em" value="" placeholder="Nome Filial">
+                        </div> 
+                    </fieldset>
+                    <!--                   
+                    <fieldset class="grupo">
+                            <p class="classtit">Espécie</p>
+                        <div class="campo">
+                            <label for="CDESPECIE"></label>
+                            <input type="text" id="CDESPECIE" name="CDESPECIE" style="width: 8em" value="" placeholder="Cod Especie">
+                        </div>
+                        <div class="campo">
+                            <label for="DSESPECIE"></label>
+                            <input type="text" id="DSESPECIE" name="DSESPECIE" style="width: 14em" value="" placeholder="Nome Especie">
+                        </div> 
+                    </fieldset>                   
+                    <fieldset class="grupo">
+                            <p class="classtit">Conta Contábil</p>
+                        <div class="campo">
+                            <label for="CDCONTA"></label>
+                            <input type="text" id="CDCONTA" name="CDCONTA" style="width: 8em" value="" placeholder="Cod Conta Contabil">
+                        </div>
+                        <div class="campo">
+                            <label for="DSCONTA"></label>
+                            <input type="text" id="DSCONTA" name="DSCONTA" style="width: 14em" value="" placeholder="Nome Conta Contabil">
+                        </div> 
+                    </fieldset>                   <fieldset class="grupo">
+                            <p class="classtit">Centro de Custo</p>
+                        <div class="campo">
+                            <label for="CDCC"></label>
+                            <input type="text" id="CDCC" name="CDCC" style="width: 8em" value="" placeholder="Cod Centro de Custo">
+                        </div>
+                        <div class="campo">
+                            <label for="DSCC"></label>
+                            <input type="text" id="DSCC" name="DSCC" style="width: 14em" value="" placeholder="Nome Centro de Custo">
+                        </div> 
+                    </fieldset>                   
+                    <fieldset class="grupo">
+                            <p class="classtit">Centro Responsável</p>
+                        <div class="campo">
+                            <label for="CDCRP"></label>
+                            <input type="text" id="CDCRP" name="CDCRP" style="width: 8em" value="" placeholder="Cod Centro Responsavel">
+                        </div>
+                        <div class="campo">
+                            <label for="DSCRP"></label>
+                            <input type="text" id="DSCRP" name="DSCRP" style="width: 14em" value="" placeholder="Nome Centro Responsavel">
+                        </div> 
+                    </fieldset>                   
+                    <fieldset class="grupo">
+                            <p class="classtit">Local</p>
+                        <div class="campo">
+                            <label for="CDLOCAL"></label>
+                            <input type="text" id="CDLOCAL" name="CDLOCAL" style="width: 8em" value="" placeholder="Cod Local">
+                        </div>
+                        <div class="campo">
+                            <label for="DSLOCAL"></label>
+                            <input type="text" id="DSLOCAL" name="DSLOCAL" style="width: 14em" value="" placeholder="Nome Local">
+                        </div> 
+                    </fieldset>                   
+                    <fieldset class="grupo">
+                            <p class="classtit">Projeto</p>
+                        <div class="campo">
+                            <label for="CDPRJ"></label>
+                            <input type="text" id="CDPRJ" name="CDPRJ" style="width: 8em" value="" placeholder="Cod Projeto">
+                        </div>
+                        <div class="campo">
+                            <label for="DSPRJ"></label>
+                            <input type="text" id="DSPRJ" name="DSPRJ" style="width: 14em" value="" placeholder="Nome Projeto">
+                        </div> 
+                    </fieldset>                   
+                    <fieldset class="grupo">
+                            <p class="classtit">Linha de Produção</p>
+                        <div class="campo">
+                            <label for="CDLINHAPRODUCAO"></label>
+                            <input type="text" id="CDLINHAPRODUCAO" name="CDLINHAPRODUCAO" style="width: 8em" value="" placeholder="Cod Linha Producao">
+                        </div>
+                        <div class="campo">
+                            <label for="DSLINHAPRODUCAO"></label>
+                            <input type="text" id="DSLINHAPRODUCAO" name="DSLINHAPRODUCAO" style="width: 14em" value="" placeholder="Nome Linha Producao">
+                        </div> 
+                    </fieldset>                   
+                    <fieldset class="grupo">
+                            <p class="classtit">Planta Seguro</p>
+                        <div class="campo">
+                            <label for="CDPS"></label>
+                            <input type="text" id="CDPS" name="CDPS" style="width: 8em" value="" placeholder="Cod Planta Seguro">
+                        </div>
+                        <div class="campo">
+                            <label for="DSPS"></label>
+                            <input type="text" id="DSPS" name="DSPS" style="width: 14em" value="" placeholder="Nome Planta Seguro">
+                        </div> 
+                    </fieldset>
+                -->
+                    <br>
+                </fieldset>
+
+
+
+
+                <fieldset class="sec">
+                <div>
+                    <p class="titulos">Informações do Bem</p>
+                    <br>
+                    <fieldset class="grupo">
+                        <div class="campo">
+                            <label for="NRBEM">Numero do Bem</label>
+                            <input type="text" id="NRBEM" name="NRBEM" style="width: 10em" value="">
+                        </div>
+                        <!--
+                        <div class="campo">
+                            <label for="NAFA">NAFA</label>
+                            <input type="text" id="NAFA" name="NAFA" style="width: 10em" value="">
+                        </div> 
+                        -->
+                    </fieldset>
+                    <fieldset class="grupo">
+
+	                    <div class="campo">
+	                        
+	                            <label for="IMAGEM">Foto 1</label>
+	                            <input class="upload" type="file" name="IMAGEM" data-container-upload="inputfile"/>
+
+	                    </div>
+	                    <div id="uploadmin">
+	                        <img class="upload-img" data-container-upload="miniatura">
+	                    </div>
+                    </fieldset>
+                    
+                    <fieldset class="grupo">
+	                    <div class="campo">
+	                        
+	                            <label for="IMAGEM2">Foto 2</label>
+	                            <input class="upload" type="file" name="IMAGEM2" data-container-upload="inputfile2"/>
+
+	                    </div>
+	                    <div id="uploadmin">
+	                        <img class="upload-img" data-container-upload="miniatura2">
+	                    </div>
+                    </fieldset>
+                    
+                    <fieldset class="grupo">
+	                    <div class="campo">
+	                        
+	                            <label for="IMAGEM3">Foto 3</label>
+	                            <input class="upload" type="file" name="IMAGEM3" data-container-upload="inputfile3"/>
+
+	                    </div>
+	                    <div id="uploadmin">
+	                        <img class="upload-img" data-container-upload="miniatura3">
+	                    </div>
+                    </fieldset>                   
+                    
+                    <fieldset class="grupo">
+	                    <div class="campo">
+	                        
+	                            <label for="IMAGEM4">Foto 4</label>
+	                            <input class="upload" type="file" name="IMAGEM4" data-container-upload="inputfile4"/>
+
+	                    </div>
+	                    <div id="uploadmin">
+	                        <img class="upload-img" data-container-upload="miniatura4">
+	                    </div>
+	                </fieldset>
+                    <fieldset class="grupo">
+                        <!--
+                        <div class="campo">
+                            <label for="TAG">TAG</label>
+                            <input type="text" id="TAG" name="TAG" style="width: 10em" value="">
+                        </div>
+                        -->
+                        <div class="campo">
+                            <label for="VIDAUTIL">Vida Util</label>
+                            <select name="VIDAUTIL" id="VIDAUTIL">
+                            	<option value=""></option>
+                                <option value="0">0</option>
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                            </select>
+                        </div>
+                    </fieldset>
+                    <div class="campo">
+                        <label for="DSBEM">Descricao do Bem</label>
+                        <textarea rows="3" style="width: 20em" id="DSBEM" name="DSBEM"></textarea>
+                    </div>
+                    <fieldset class="grupo">
+                        <div class="campo">
+                            <label for="DSMARCA">Marca</label>
+                            <input type="text" id="DSMARCA" name="DSMARCA" style="width: 10em" value="">
+                        </div><div class="campo">
+                            <label for="DSMODELO">Modelo</label>
+                            <input type="text" id="DSMODELO" name="DSMODELO" style="width: 10em" value="">
+                        </div><div class="campo">
+                            <label for="NRSERIE">N de Serie</label>
+                            <input type="text" id="NRSERIE" name="NRSERIE" style="width: 10em" value="">
+                        </div>
+                    </fieldset>
+                    <br>
+
+
+		</div>
+                </fieldset>
+
+                <fieldset class="sec">
+                    <p class="titulos">Complemento</p>
+                    <br>
+                    <fieldset class="grupo">
+                        <div class="campo">
+                            <label for="DSDIMENSAO">Dimensão</label>
+                            <p id="hint">(larguraXcomprimentoXaltura)</p>
+                            <input type="text" id="DSDIMENSAO" name="DSDIMENSAO" style="width: 13em" value="" placeholder="000X000X000">
+                        </div>
+                        <div class="campo">
+                            <label for="DSANDAR">Andar</label>
+                            <p> &nbsp;</p>
+                            <input type="text" id="DSANDAR" name="DSANDAR" style="width: 10em" value="">
+                        </div>
+                    </fieldset>
+
+                    <fieldset class="grupo">
+                        <div class="campo">
+                            <label for="DSCAPACIDADE">Capacidade</label>
+                            <input type="text" id="DSCAPACIDADE" name="DSCAPACIDADE" style="width: 13em" value="">
+                        </div>
+                        <div class="campo">
+                            <label for="NRRPM">RPM</label>
+                            <input type="text" id="NRRPM" name="NRRPM" style="width: 10em" value="">
+                        </div>
+                    </fieldset>
+                    <fieldset class="grupo">
+                        <div class="campo">
+                            <label for="DSPOTENCIA">Potencia Motor</label>
+                            <input type="text" id="DSPOTENCIA" name="DSPOTENCIA" style="width: 10em" value="">
+                        </div>
+                        <div class="campo">
+                            <label for="DSOBS">Observacão</label>
+                            <textarea rows="1" style="width: 13em" id="DSOBS" name="DSOBS"></textarea>
+                        </div>
+                    </fieldset>
+                    <br>
+                </fieldset>
+
+                    <button class="submit" type="submit" name="submit" href="http://cadastro.integradedigital.com.br/">Enviar Dados</button>
+            </form>
+            <script type="text/javascript" src="JS/script.js"></script>
+        </div>
+        <br>
+        <br>
+        <br>
+    </body>
+    
+    <footer>
+        <p id="as">Developed by Integrade Solutions</p>
+    </footer>
+    
+
+</html>
