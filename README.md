@@ -1,2 +1,2 @@
 # WEB-CRUD
-CRUD básico na WEB
+CRUD básico na WEB (EM DESENVOLVIMENTO)
